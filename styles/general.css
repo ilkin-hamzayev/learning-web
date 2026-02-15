@@ -1,0 +1,35 @@
+body {
+    margin: 54px 0 0px 400px;
+    background-color: black;
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: rgb(231, 233, 234);
+    font-size: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+@media (min-width: 1000px) {
+}
+
+
+@font-face {
+    font-family: 'TwitterChirp';
+    src: url(../../fonts/chirp-regular-web.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TwitterChirp';
+    src: url(../../fonts/chirp-medium-web.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TwitterChirp';
+    src: url(../../fonts/chirp-bold-web.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

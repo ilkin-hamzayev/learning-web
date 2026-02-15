@@ -1,0 +1,989 @@
+/*General feed*/
+.feed {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    height: 9000px;
+    border-right: 1px solid rgba(197, 197, 197, 0.3);
+    margin-right: -1px;    
+}
+
+
+
+/*Feed: Post-Edit-Tweet Section ---
+Childs : feed-pet and feed-profile-picture-images*/
+.feed-post-section {
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    background-color: black;
+    height: auto;
+    width: 100%;
+    border: 1px rgba(197, 197, 197, 0.3) solid;
+    user-select: none;
+}
+        /*Feed: General profile image properties */
+        .feed-profile-picture-images {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            object-fit: cover;
+            margin: 15px 0px 0px 15px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .feed-profile-picture-images:hover {
+            opacity: 0.9;
+        }
+        /*Feed: Section that is next to image profile in Feed PET section ---
+        Childs: feed-textarea-box and feed-pet-icons-box*/
+        .feed-pet {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            position: relative;
+        }
+
+                /*Child div element that contains textarea 
+                inside the "feed-pet" div element ---
+                Childs: feed-textarea*/
+                .feed-textarea-box {
+                    display: flex;
+                    width: 550px;
+                    flex-direction: column;
+                    position: relative;
+                }
+
+                        /*Text area input properties ---
+                        Pseudo-classes: ::placeholder and :focus
+                        */
+                        .feed-textarea {
+                            background-color: black;
+                            border: none;
+                            width: 95%;
+                            color: rgb(231, 233, 234);
+                            font-size: 20px;
+                            margin-left: 10px;
+                            margin-bottom: 10px;
+                            cursor: auto;
+                            padding-right: 3px;
+                        }
+                        .feed-textarea::-webkit-scrollbar {
+                            width: 15px;
+                        }
+                        .feed-textarea::-webkit-scrollbar-track {
+                            background-color: rgb(22, 24, 28);
+                            cursor: default;    
+                        }
+                        .feed-textarea::-webkit-scrollbar-thumb {
+                            background-color: rgb(62, 65, 68);
+                            border-radius: 12px;
+                            border: 3.5px solid transparent;
+                            background-clip: content-box;
+                            cursor: default;
+                        }
+                        .feed-textarea::-webkit-scrollbar-thumb:hover {
+                            background-color: rgba(101, 103, 105);
+                        }
+                        .feed-textarea::-webkit-scrollbar-button {
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            height: 14px;
+                            background-color: rgb(22, 24, 28);
+                            cursor: default;
+                        }
+                        .feed-textarea::-webkit-scrollbar-button:vertical:decrement {
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 15 L12 9 L17 15 Z' fill='rgb(62,65,68)' stroke='rgb(62,65,68)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3e%3c/svg%3e");
+                            transition: all 0.1s linear;
+                            border-top: 5px solid transparent;
+                        }
+                        .feed-textarea::-webkit-scrollbar-button:vertical:decrement:hover {
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 15 L12 9 L17 15 Z' fill='rgb(113, 118, 123)' stroke='rgb(113, 118, 123)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3e%3c/svg%3e");
+                        }
+                        .feed-textarea::-webkit-scrollbar-button:vertical:increment {
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 9 L12 15 L17 9 Z' fill='rgb(62,65,68)' stroke='rgb(62,65,68)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3e%3c/svg%3e");
+                            border-bottom: 5px solid transparent;
+                        }
+                        .feed-textarea::-webkit-scrollbar-button:vertical:increment:hover {
+                            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 9 L12 15 L17 9 Z' fill='rgb(113, 118, 123)' stroke='rgb(113, 118, 123)' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/%3e%3c/svg%3e");
+                        }
+
+                            /*Textarea Placeholder pseudo-class*/
+                            .feed-textarea.isEmpty::before {
+                                content: attr(data-placeholder);
+                                font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                                z-index: 0;
+                                font-size: 20px;
+                                color: grey;
+                                cursor: text;
+                                white-space: nowrap;
+                                pointer-events: none;
+                                overflow: hidden;
+                            }
+
+                            /*Textarea Focus pseudo-class*/
+                            .feed-textarea:focus {
+                                outline: none;
+                            }
+
+                .feed-pet-control {
+                    position: sticky;
+                    bottom: 0;
+                }
+                .feed-pet-control.bottom {
+                    background-color: black;
+                    position: sticky;
+                    bottom: 0;
+                }
+                /*Child div element that contains all icons under 
+                the textarea as div inside the "feed-pet" div element ---
+                Child: feedpet-icon and feed-post-button*/
+                .feed-pet-icons-box {
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 3px;
+                    height: 40px;
+                    align-items: center;
+                    vertical-align: middle;
+                    margin-top: 15px;
+                    margin-bottom: 8px;
+                    position: relative;
+                }
+
+                        /*Child div element that contains svg elements ---
+                        Childs: feedpet-icon-svg*/
+                        .feedpet-icon {
+                            display: flex;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 17.5px;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                        }
+                        .feedpet-icon:nth-child(7) {
+                            opacity: 0.5;
+                        }
+                        .feedpet-icon:nth-child(-n+6) {
+                            cursor: pointer;
+                        }
+                        .feedpet-icon:not(last-child):not(:nth-child(7)):hover {
+                            background-color: rgba(29, 155, 240, 0.09);
+                        }
+                                /*Feed: Icons as svg element under 
+                                textarea inside in the "feedpet-icon" div element and 
+                                in "Post-Edit-Tweet Section" */
+                                .feedpet-icon-svg {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                                .feed-icon-tt {
+                                    position: absolute;
+                                    bottom: -20px;
+                                    background-color: rgba(75, 92, 107, 0.8);
+                                    color: rgba(221, 225, 227, 255);
+                                    font-size: 11.8px;
+                                    font-weight: 500;
+                                    white-space: nowrap;
+                                    padding: 1px 4px;
+                                    opacity: 0;
+                                    pointer-events: none;
+                                    border-radius: 1px;
+                                    visibility: hidden;
+                                    transform: translateY(2px);
+                                    transition: opacity 0.3 ease, transform 0.3 ease;
+                                    transition-delay: 0s;
+                                }
+                                .feedpet-icon:hover .feed-icon-tt {
+                                    opacity: 1;
+                                    pointer-events: none;
+                                    transform: translateY(0);
+                                    visibility: visible;
+                                    transition-delay: 0.9s;
+                                }
+
+                        /*Feed: in PET Section --- Post-button div element that 
+                         is placed inside "feed-pet-icons-box" div element*/
+                        .feed-post-button {
+                            background-color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: black;
+                            width: 70px;
+                            font-weight: bold;
+                            height: 20px;
+                            padding: 8px 0px;
+                            border-radius: 25px;
+                            background-color: rgb(239, 243, 244); 
+                            border-color: rgba(0, 0, 0, 0);
+                            margin-left: 200px;
+                            opacity: 0.5;
+                            cursor: default;
+                            user-select: none;
+                        }
+
+
+/*Feed: Show N posts section */
+.feed-showposts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(29, 155, 240);
+    height: 50px;
+    width: 100%;
+    border: 1px solid rgba(197, 197, 197, 0.3);
+    cursor: pointer;
+    caret-color: transparent;
+    margin-top: -1px;
+}
+.feed-showposts:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+
+
+
+/*Feed: Tweets Section ---
+Childs: feed-profile-condet 
+and feed-twinter-icons-box*/
+.feed-tweets {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(197, 197, 197, 0.3);
+    border-top: 1px solid rgba(197, 197, 197, 0.3);
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: -1px;
+}
+.feed-tweets:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+        /*Feed: CONtent and DETails of Channel ---
+         Childs : feed-profile-picture-box and 
+         feed-condet*/
+        .feed-profile-condet {
+            display: flex;
+            flex-direction: row;
+            row-gap: 10px;
+        }
+
+                .feed-profile-picture-box {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    height: 55px;
+                    caret-color: transparent;
+                }
+
+                        .feed-tweet-pp-image {
+                            cursor: pointer;
+                        }
+                        .feed-tweet-pp-image:hover {
+                            opacity: 0.9;
+                        }
+                                .feed-profile-tooltip {
+                                    display: flex;
+                                    position: absolute;
+                                    flex-direction: column;
+                                    width: 270px;
+                                    padding: 15px;
+                                    justify-content: space-between;
+                                    background-color: black;
+                                    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+                                    border-radius: 20px;
+                                    backdrop-filter: blur(12px);
+                                    z-index: 9999;
+                                    cursor: initial;  
+                                    caret-color: transparent;  
+
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition-property: opacity, transform, visibility;
+                                    transition-duration: 0.2s, 0.2s, 0.35s, 0.35s, 0s;
+                                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                                    transition-delay: 0s, 0s, 0s, 0s, 0.35s;
+                                    transform: translateY(0);
+                                }
+
+                                    .feed-profile-tooltip.show {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transition-delay: 0s;
+                                    }
+                                        .feed-tt-pp-follow-box {
+                                            display: flex;
+                                            flex-direction: row;
+                                            align-items: start;
+                                            justify-content: space-between;
+                                        }
+                                
+                                                .feed-tt-pp-image {
+                                                    width: 64px;
+                                                    height: 64px;
+                                                    border-radius: 37px;
+                                                    border: none;
+                                                    object-fit: cover;
+                                                    cursor: pointer;
+                                                }
+                                                .feed-tt-pp-image:hover {
+                                                    opacity: 0.9;
+                                                }
+                                                .feed-tt-follow-button {
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    background-color: rgb(231, 233, 234);
+                                                    color: black;
+                                                    font-weight: bold;
+                                                    border-radius: 24px;
+                                                    padding: 8px 17px;
+                                                    font-size: 14px;
+                                                    cursor: pointer;
+                                                    caret-color: transparent;
+                                                }
+                                                .feed-tt-follow-button:hover {
+                                                    opacity: 0.9;
+                                                }
+
+                                        .feed-tt-details-box {
+                                            display: flex;
+                                            flex-direction: column;
+                                            margin-top: 8px;
+                                        }
+                                                .feed-tt-names-box {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    row-gap: 0px;
+                                                    cursor: pointer;
+                                                }
+                                                        .feed-tt-name-box {
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            column-gap: 3px;
+                                                            align-items: center;
+                                                        }
+                                                                .feed-tt-name {
+                                                                    font-weight: bold;
+                                                                    white-space: nowrap;
+                                                                    font-size: 17px;
+                                                                }
+                                                                .feed-tt-name:hover {
+                                                                    text-decoration: underline;
+                                                                }
+                                                        .feed-tt-atname {
+                                                            color: rgb(113, 118, 123);
+                                                            white-space: nowrap;
+                                                            font-size: 15px;
+                                                            cursor: pointer;
+                                                        }
+                                                .feed-tt-description {
+                                                    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
+                                                    margin-top: 12px;
+                                                    overflow-wrap: break-word;
+                                                    cursor: text;
+                                                }
+
+                                        .feed-tt-f-box {
+                                            display: flex;
+                                            flex-direction: row;
+                                            column-gap: 20px;
+                                            margin-top: 12px;
+                                            cursor: pointer;
+                                        }
+                                                .feed-tt-f{
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    column-gap: 3px;
+                                                }
+                                                .feed-tt-f:hover {
+                                                    text-decoration: underline;
+                                                }
+                                                        .feed-tt-f-num {
+                                                            font-weight: bold;
+                                                        }
+                                                        .feed-tt-f-text {
+                                                            color: rgb(113, 118, 123);
+                                                        }
+
+                                        .feed-tt-profile-summary {
+                                            display: flex;
+                                            flex-direction: row;
+                                            border: 1px rgb(83, 100, 113) solid;
+                                            width: 100%;
+                                            border-radius: 30px;
+                                            margin-top: 16px;
+                                            padding: 7px 0px;
+                                            justify-content: center;
+                                            column-gap: 5px;
+                                            cursor: pointer;
+                                            caret-color: transparent;
+                                        }
+                                        .feed-tt-profile-summary:hover {
+                                            background-color: rgba(255,255,255,0.07);
+                                        }
+                                                .feed-tt-ps-grok {
+                                                    width: 20px;
+                                                    height: 20px;
+                                                }
+
+                                                .feed-tt-ps-text {
+                                                    font-size: 15px;
+                                                    font-weight: bold;
+                                                }
+                .feed-condet {
+                    display: flex;
+                    flex-direction: column;
+                }
+                        /*Feed: Details, Content, Grok button, More Button Line 
+                        (DE-tails-CO-ntent-GR-ok-M-o-R-e) --- 
+                        Childs: feed-twinter-channel-name-box and 
+                        feed-twinter-channel-atname-box and 
+                        feed-grmr*/
+                        .feed-condet-decogrmr {
+                            display: flex;
+                            margin-top: 12px;
+                            flex-direction: row;
+                            position: relative;
+                            width: 530px;
+                        }
+
+                                /*Feed: Channel Name Box ---
+                                Childs: feed-condet-channel-name 
+                                and blur-tick-box and
+                                feed-profile-tooltip*/
+                                .feed-condet-channel-name-box {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    vertical-align: middle;
+                                    column-gap: 3px;
+                                    margin-left: 10px;
+                                    position: relative;
+                                }
+                                .feed-condet-channel-name-box::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 10px;
+                                }
+
+                                        /*Feed: Channel name text box*/
+                                        .feed-condet-channel-name {
+                                            font-size: 17px;
+                                            font-weight: 500;
+                                            white-space: nowrap;
+                                            transition: text-decoration 0.15s;
+                                            cursor: pointer;
+                                            caret-color: transparent;
+                                        }
+                                        .feed-condet-channel-name::after {
+                                            content: "";
+                                            position: absolute;
+                                            right: 0px;
+                                            width: 18px;
+                                            height: 23px;
+                                        }
+                                        #void-element::after {
+                                            width: 0;
+                                            height: 0;
+                                            content: "";
+                                        }
+                                        /*Blue or Gold Tick Box*/
+                                        .blue-or-gold-or-silver-tick-box {
+                                            width: 18px;
+                                            height: 18px;
+                                            transition: text-decoration 0.15s;
+                                            pointer-events: none;
+                                        }
+                                            .feed-condet-channel-name-box:hover {
+                                                text-decoration: underline;
+                                            }
+
+                                /*Feed: Channel @name box with time ---
+                                Childs : feed-condet-channel-atname
+                                and feed-profile-tooltip*/
+                                .feed-condet-channel-atname-box {
+                                    margin-left: 2px;
+                                    display: flex;
+                                    align-items: center;
+                                    position: relative;
+                                    flex-direction: row;
+                                    column-gap: 5px;
+                                    caret-color: transparent;
+                                }
+                                        /*Feed-twinter-channel-atname*/
+                                        .feed-condet-channel-atname {
+                                            color: rgb(113, 118, 123);
+                                            font-size: 17px;
+                                            white-space: nowrap;
+                                            cursor: pointer;
+                                        }
+                                        .feed-condet-channel-atname-time {
+                                            color: rgb(113, 118, 123);
+                                            font-size: 17px;
+                                            white-space: nowrap;
+                                            cursor: pointer;
+                                        }
+                                        .feed-condet-channel-atname-middle-dot {
+                                            color: rgb(113, 118, 123);
+                                            font-size: 17px;
+                                            white-space: nowrap;
+                                        }
+
+                                        
+                                        .feed-condet-channel-atname-time-box {
+                                            position: relative;
+                                        }
+                                        .feed-condet-channel-atname-time-box:hover {
+                                            text-decoration: underline;
+                                            text-decoration-color: rgb(113, 118, 123);
+                                        }
+                                                .feed-atname-time-tooltip {
+                                                    position: absolute;
+                                                    background-color: rgba(75, 92, 107, 0.8);
+                                                    color: rgba(221, 225, 227, 255);
+                                                    white-space: nowrap;
+                                                    font-size: 11px;
+                                                    padding: 0px 3px;
+                                                    opacity: 0;
+                                                    pointer-events: none;
+                                                    visibility: hidden;
+                                                    transform: translateY(2px);
+                                                    transition: opacity 0.3 ease, transform 0.3 ease;
+                                                }
+                                                .feed-atname-time-tooltip.show {
+                                                    opacity: 1;
+                                                    pointer-events: none;
+                                                    transform: translateY(0);
+                                                    visibility: visible;
+                                                }
+                        
+                                /*Feed: Grok and More Buttons div element 
+                                (GR-ok-M-o-R-e) ---
+                                Childs: feed-condet-grmr-icon-box*/
+                                .feed-condet-grmr {
+                                    display: flex;
+                                    flex-direction: row;
+                                    position: absolute;
+                                    right: -15px;
+                                    top: -5px;
+                                }
+                                        /*Feed Grok or More icon box ---
+                                        Childs: grok or more svg element*/
+                                        .feed-condet-grmr-icon-box {
+                                            width: 35px;
+                                            height: 35px;
+                                            border-radius: 17.5px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            margin-left: -7px;
+                                            position: relative;
+                                        }
+                                        .feed-condet-grmr-icon-box:hover .feed-icon-tt {
+                                            opacity: 1;
+                                            pointer-events: none;
+                                            transform: translateY(0);
+                                            visibility: visible;
+                                            transition-delay: 0.9s;
+                                        }
+                                        .feed-condet-grmr-icon-box svg {
+                                            width: 19px;
+                                            height: 19px;
+                                        }
+                                        .feed-condet-grmr-icon-box:hover svg{
+                                            fill: rgb(29, 155, 240);
+                                        }
+                                        .feed-condet-grmr-icon-box:hover {
+                                            background-color: rgba(29, 155, 240, 0.085);
+                                        }
+
+                                                .feed-condet-grmr-icon-box svg {
+                                                    fill: rgb(113, 118, 123);
+                                                }
+                                                
+                                        
+
+
+                        /*Contents*/
+                        .feed-condet-content {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                                /*Feed: Twinter Content Box that is image ---
+                                Childs: feed-condet-content-imgpic*/
+                                .feed-condet-imgcontent-box {
+                                    display: flex;
+                                    margin-left: 10px;
+                                    margin-right: 10px;
+                                    margin-top: 10px;
+                                    max-width: 525px;
+                                    user-select: none;
+                                }
+
+                                        /*Feed: Image content properties*/
+                                        .feed-condet-content-imgpic {
+                                            width: 100%;
+                                            object-fit: cover;
+                                            border-radius: 15px;
+                                            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+                                        }
+
+
+
+                                    /*3th Image Properties*/
+                                    .third-image {
+                                        max-width: 390px;
+                                    }
+
+
+                                    /*4th Image Properties*/
+                                    .fourth-image {
+                                        max-width: 430px;
+                                    }
+
+
+
+                                    /*5th Image Properties*/
+                                    .fifth-image {
+                                        max-width: 430px;
+                                    }
+
+                                    /*6th Image Properties*/
+                                   .feed-condet-imgcontent-6thbox {
+                                        display: flex;
+                                        border-radius: 15px;
+                                        flex-direction: column;
+                                        row-gap: 3px;
+                                        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);                    
+                                   }
+                                   .feed-condet-imgcontent-l {
+                                        display: flex;
+                                        flex-direction: row;
+                                        column-gap: 3px;
+                                    }
+                                    .feed-condet-content-6thimgpic {
+                                        object-fit: cover;
+                                        width: 260px;
+                                        height: 150px;
+                                    }
+                                    .tl {
+                                        border-top-left-radius: 15px;
+                                    }
+                                    .tr {
+                                        border-top-right-radius: 15px;
+                                    }
+                                    .bl {
+                                        border-bottom-left-radius: 15px;
+                                    }
+                                    .br {
+                                        border-bottom-right-radius: 15px;
+                                    }
+
+
+
+                                    /*7th IMAGE Properties*/
+                                    .seventh-box {
+                                        max-width: 380px;
+                                        height: 500px;
+                                        overflow: hidden;
+                                        position: relative;
+                                        border-radius: 15px;
+                                        border: 1px solid rgba(197, 197, 197, 0.3);
+                                        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+                                    }
+                                    .seventh-image {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: auto;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        object-fit: cover;
+                                        border: initial;
+                                        box-shadow: initial;
+                                    }
+
+
+                                    /*9th Image Properties*/
+                                    .ninth-box {
+                                        max-width: 380px;
+                                        height: 500px;
+                                        overflow: hidden;
+                                        position: relative;
+                                        border-radius: 15px;
+                                        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+                                    }
+                                    .ninth-image {
+                                        width: 100%;
+                                        height: auto;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        object-fit: cover;
+                                    }
+
+
+                                    /*10th Image Properties*/
+                                    .tenth-box {
+                                        height: 97%;
+                                    }
+                                    .tenth-image {
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+
+
+                                    /*11th Image Properties*/
+                                    .eleventh-box {
+                                        width: 400px;
+                                        border: 1px solid rgba(197, 197, 197, 0.3);
+                                        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+                                        border-radius: 15px;            
+                                    }
+                                    .eleventh-image {
+                                        width: 400px;
+                                        height: 650px;
+                                        object-fit: cover;
+                                    }
+
+                                    /*12th Image Properties*/
+                                    .twelfth-image {
+                                        width: 460px;
+                                        object-fit: cover;
+                                    }
+
+                                /*Feed: Twitter Content that is text*/
+                                .feed-condet-txtcontent-box {
+                                    padding-left: 10px;
+                                    padding-top: 5px;
+                                }
+
+        /*Tweets icons box under the image content ---
+        Childs: feed-tweets-iconwithnum*/
+        .feed-tweets-icons-box {
+            display: flex;
+            flex-direction: row;
+            margin-left: 65px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: 450px;
+            padding-right: 75px;
+            column-gap: 52px;
+            align-items: center;
+            position: relative;
+        }
+
+                
+                /*Feed Tweets: Icons and numbers near to it ---
+                Childs: feed-tweets-icon
+                feed-tweets-numoficon*/
+                .feed-tweets-icon-withnum {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: fit-content;
+                    transition: all 0.15s;
+                    user-select: none;
+                }
+
+                .feed-tweets-icon-withnum svg {
+                    fill: rgb(113, 118, 123);
+                }
+
+                .feed-tweets-icon {
+                    position: relative;
+                }
+
+                .feed-tweets-icon-withnum:hover .feed-icon-tt {
+                    opacity: 1;
+                    pointer-events: none;
+                    transform: translateY(0);
+                    visibility: visible;
+                    transition-delay: 0.9s;
+                }
+
+
+                .feed-tweets-icon-withnum:first-child:hover
+                svg {
+                    fill: rgb(29, 155, 240);
+                }
+                .feed-tweets-icon-withnum:first-child:hover
+                .feed-tweets-icon {
+                    background-color: rgba(29, 155, 240, 0.085);
+                }
+                .feed-tweets-icon-withnum:first-child:hover
+                .feed-tweets-numoficon {
+                    color: rgb(29, 155, 240);
+                }
+                
+                
+
+
+                .feed-tweets-icon-withnum:nth-child(2):hover svg {
+                    fill: rgb(0, 186, 124);
+                }
+                .feed-tweets-icon-withnum:nth-child(2):hover
+                .feed-tweets-icon {
+                    background-color: rgba(0, 186, 124, 0.085);
+                }
+                .feed-tweets-icon-withnum:nth-child(2):hover
+                .feed-tweets-numoficon {
+                    color: rgb(0, 186, 124);
+                }
+
+
+
+                .feed-tweets-icon-withnum:nth-child(3):hover
+                .feed-tweets-icon svg {
+                    fill: rgb(249, 24, 128);
+                }
+                .feed-tweets-icon-withnum:nth-child(3):hover
+                .feed-tweets-icon {
+                    background-color: rgba(249, 24, 128, 0.085);
+                }
+                .feed-tweets-icon-withnum:nth-child(3):hover
+                .feed-tweets-numoficon {
+                    color: rgb(249, 24, 128);
+                }
+                        /*Icons that contains svg element*/
+                        .feed-tweets-icon {
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 17.5px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .feed-tweets-icon svg {
+                            width: 18px;
+                            height: 18px;
+                        }
+
+                        /*Numbers near to icons*/
+                        .feed-tweets-numoficon {
+                            color: rgb(113, 118, 123);
+                            font-size: 14px;
+                            margin-left: -5px;
+                            padding-bottom: 2px;
+                        }
+
+                .feed-tweets-icon-withnum:nth-child(4):hover
+                svg {
+                    fill: rgb(29, 155, 240);
+                }
+                .feed-tweets-icon-withnum:nth-child(4):hover
+                .feed-tweets-icon {
+                    background-color: rgba(29, 155, 240, 0.085);
+                }
+                .feed-tweets-icon-withnum:nth-child(4):hover
+                .feed-tweets-numoficon {
+                    color: rgb(29, 155, 240);
+                }
+
+
+
+
+                /*Favourite and share icons whole box ---
+                Child: feed-tweets-fvshr-icon*/
+                .feed-tweets-fvshr {
+                    display: flex;
+                    flex-direction: row;
+                    position: absolute;
+                    right: -10px;
+                }
+                        /*FaVourite and SHaRe icon boxes*/
+                        .feed-tweets-fvshr-icon {
+                            height: 35px;
+                            width: 35px;
+                            border-radius: 17.5px;
+                            margin-left: -3px;
+                            justify-content: center;
+                            display: flex;
+                            align-items: center;
+                            transition: all 0.15s;
+                            position: relative;
+                        }
+                        .feed-tweets-fvshr-icon svg {
+                            width: 18px;
+                            height: 18px;
+                            fill: rgb(113, 118, 123);
+                        }
+                        .feed-tweets-fvshr-icon:hover .feed-icon-tt {
+                            opacity: 1;
+                            pointer-events: none;
+                            transform: translateY(0);
+                            visibility: visible;
+                            transition-delay: 0.9s;
+                        }
+                        .feed-tweets-fvshr-icon:hover svg {
+                            fill: rgb(29, 155, 240);
+                        }
+                        .feed-tweets-fvshr-icon:hover {
+                            background-color: rgba(29, 155, 240, 0.085);
+                        }
+
+
+
+.inner-container:hover {
+    cursor: pointer;
+    background-color: rgba(29, 155, 240, 0.1);
+}
+
+.plus-sign-div {
+    border: 1px solid rgba(197, 197, 197, 0.3);
+    cursor: pointer;
+}
+.outer-plus {
+    position: relative;
+}
+.outer-plus:hover .plus-sign-div{
+    background-color: rgba(3, 16, 24);
+}
+.tooltip-plus-sign {
+    position: absolute;
+    bottom: -20px;
+    background-color: rgba(75, 92, 107, 0.8);
+    color: rgba(221, 225, 227, 255);
+    font-size: 11.8px;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 1px 4px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 1px;
+    visibility: hidden;
+    transition: visibility 0.3s;
+    transition-delay: 0s;
+}
+.outer-plus:hover .tooltip-plus-sign{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.9s;
+}
+
+
+
+
+
+
+.feed-tt-follow-button.clicked {
+    margin-left: 60.5px !important;
+}
+.feed-tt-follow-button.unfollowhover {
+    color: rgb(234, 33, 46) !important;
+    border: 1px rgb(234, 33, 46) solid !important;
+    background-color: rgba(234, 33, 46, 0.12) !important;
+    padding: 8px 19.1375px !important;
+}
+.feed-tt-follow-button.mouseout {
+    background-color: transparent !important;
+    color: rgb(231, 233, 234) !important;
+    border: 0.5px rgba(255, 255, 255, 0.3) solid !important;
+    padding: 8px 17px !important;
+}

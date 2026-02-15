@@ -1,0 +1,69 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 400px;
+    width: 613.5px;
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px rgba(197, 197, 197, 0.3) solid;
+    border-collapse: collapse;
+    border-top: none;
+    backdrop-filter: blur(10px);
+    z-index: 1002;
+    user-select: none;
+}
+.hd-following,
+.hd-for-you {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+.hd-following:hover {
+    background-color: rgba(256, 256, 256, 0.15);
+}
+.hd-for-you:hover {
+    background-color: rgba(256, 256, 256, 0.15);
+}
+.hd-f-text {
+    font-weight: bold;
+}
+.hd-for-you-underline {
+    position: absolute;
+    height: 4.5px;
+    width: 60px;
+    background-color: rgb(29, 155, 240);
+    bottom: 0;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+.hd-following-underline {
+    position: absolute;
+    height: 4.5px;
+    width: 75px;
+    background-color: rgb(29, 155, 240);
+    bottom: 0;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+.hd-for-you.selected .hd-for-you-underline,
+.hd-following.selected .hd-following-underline {
+    opacity: 1;
+}
+
+.hd-following:not(.selected) .hd-f-text,
+.hd-for-you:not(.selected) .hd-f-text {
+  color: rgb(113, 118, 123);
+  font-weight: bold;
+}
+

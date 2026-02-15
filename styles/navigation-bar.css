@@ -1,0 +1,224 @@
+.navigation-bar {
+    display: flex;
+    flex-direction: column;
+    row-gap: 43px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    background-color: black;
+    z-index: 1000;
+    border-right: 1px rgba(197, 197, 197, 0.3) solid;
+    user-select: none;
+}
+
+        /*Navigation whole icons box*/
+        .nav-whole-icons-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            vertical-align: center;
+        }
+         
+                    /*Navigation bar first line icon box*/
+                    .nav-1l-icon-box {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 5px;
+                        cursor: pointer;
+                    }
+                    .nav-1l-icon-box:hover {
+                        background-color: rgba(256, 256, 256, 0.15);
+                    }
+
+                            /*Navigation first line svg*/
+                            .nav-1l-svg {
+                                width: 34px;
+                                height: 30px;
+                            }
+
+                    /*Navigation second line box*/
+                    .nav-2l-box {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                            /*Navigation second line icon and text box*/
+                            .nav-2l-icontext-box {
+                                display: flex;
+                                flex-direction: row;
+                                width: fit-content;
+                                cursor: pointer;
+                                padding-right: 25px;
+                                color: white;
+                                text-decoration: none;
+                            }
+                            .nav-2l-icontext-box:hover {
+                                background-color: rgba(256, 256, 256, 0.15);
+                                border-radius: 30px;
+                            }
+
+                                    /*Navigation first line icon and
+                                    second line box*/
+                                    .nav-1l-icon-box,
+                                    .nav-2l-icon-box {
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 25px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+
+                                            /*Navigation second line svg*/
+                                            .nav-2l-svg {
+                                                width: 27px;
+                                                height: 27px;
+                                            }
+
+                                    /*Navigation second line icon and text box*/
+                                    .nav-2l-text-box {
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 22px;
+                                        font-weight: 400;
+                                    }
+                                    
+
+                            /*Navigation post box*/
+                            .nav-post-box {
+                                background-color: rgb(239, 243, 244);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 25px;
+                                border-color: rgba(0, 0, 0, 0);
+                                width: 58%;    
+                                margin-top: 10px;
+                                height: 52px;
+                                cursor: pointer;
+                            }
+                            .nav-post-box:hover {
+                                background-color: rgba(239, 243, 244, 0.95);
+                            }
+
+                                    /*Navigation post svg*/
+                                    .nav-post-svg {
+                                        width: 24px;
+                                        height: 24px;
+                                        color: rgb(15, 20, 25);
+                                        display: none;
+                                    }
+
+                                    /*Navigation post text*/
+                                    .nav-post-text {
+                                        color: rgb(15, 20, 25);
+                                        font-size: 18px;
+                                        font-weight: 620;
+                                    }
+
+        /*Navigation profile box*/
+        .nav-profile-box {
+            margin-left: 130px;
+            display: flex;
+            flex-direction: row;
+            column-gap: 10px;
+            vertical-align: middle;
+            justify-content: center;
+            width: fit-content;
+            padding: 10px 10px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .nav-profile-box:hover {
+            background-color: rgba(256, 256, 256, 0.15);
+        }
+
+                /*Navigation profile picture images*/
+                .nav-profile-picture-images {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    border: none;
+                    object-fit: cover;
+                }
+                
+                /*Navigation profile details*/
+                .nav-profile-details {
+                }
+
+                        /*Navigation profile name box*/
+                        .nav-profile-name-box {
+                            display: flex;
+                            flex-direction: row;
+                            column-gap: 2px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                                /*Navigation profile name text*/
+                                .nav-profile-name-text {
+                                    font-size: 16px;
+                                    color: white;
+                                    white-space: nowrap;
+                                    font-weight: bold;
+                                }
+
+                                /*Navigation profile lock icon box*/
+                                .nav-profile-lock-box {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+
+                                        /*Navigation profile lock icon svg*/
+                                        .nav-profile-lock-svg {
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+                        
+                        /*Navigation profile @name box*/
+                        .nav-profile-atname {
+                            color: rgb(113, 118, 123);
+                        }
+
+                /*Navigation profile more icon box*/
+                .nav-profile-more-icon-box {
+                    display: flex;
+                    width: 19px;
+                    height: 40px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 15px;
+                }
+
+                        /*Navigation profile more icon svg*/
+                        .nav-profile-more-svg {
+                            width: 19px;
+                            height: 19px;
+                        }
+
+
+        /*Navigation first line, second line icon box and post box*/
+        .nav-1l-icon-box,
+        .nav-2l-box,
+        .nav-post-box {
+            margin-left: 130px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

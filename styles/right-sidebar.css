@@ -1,0 +1,477 @@
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: -300px;
+
+
+    align-self: flex-start;
+
+    width: 510px;
+    margin-top: 0px;
+    background-color: black;
+    border-top: none;
+
+    caret-color: transparent;
+
+    border-left: 1px solid rgba(197, 197, 197, 0.3);
+}
+
+
+        /*Right Sidebar Subscription Premium*/
+        .rs-subprem {
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+            border: 1px solid rgba(197, 197, 197, 0.3);
+            margin-top: 10px;
+            width: 65%;
+            border-radius: 15px;
+            padding: 10px 0px 10px 20px;
+            caret-color: white;        
+        }
+
+                /*Right Sidebar Titles*/
+                .rs-titles {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                /*Right Sidebar Subscription Premium Description*/
+                .rs-subprem-description {
+                    width: 90%;
+                    margin-top: 10px;
+                }
+
+                /*Right Sidebar Subscription Premium button*/
+                .rs-subprem-button {
+                    background-color: rgb(29, 155, 240);
+                    font-weight: bold;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    margin-top: 15px;
+                    margin-bottom: 3px;
+                    padding: 8px 5px;
+                    cursor: pointer;
+                    user-select: none;
+                }
+                .rs-subprem-button:hover {
+                    background-color: rgb(28, 149, 229);
+                }
+
+        /*Right Sidebar Trend Section*/
+        .rs-trend {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(197, 197, 197, 0.3);
+            width: 69%;
+            border-radius: 15px;
+            margin-left: 30px;
+            margin-top: 15px;
+            caret-color: white;
+        }
+
+                .rs-trend-title {
+                    padding: 10px 10px 10px 15px;
+                }
+                /*Right Sidebar Trend Section --- B*/
+                .rs-trend-b {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding-right: 15px;
+                    padding: 10px 0px 10px 15px;
+                    cursor: pointer;
+                }
+                .rs-trend-b:hover {
+                    background-color: rgba(255, 255, 255, 0.03);
+                }
+                        /*Right Sidebar Trend Section --- B - all texts*/
+                        .rs-trend-b-texts {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                                /*Right Sidebar Trend Section --- B - 
+                                Subtitle
+                                Post number*/
+                                .rs-trend-b-subtitle,
+                                .rs-trend-b-postnum {
+                                    font-size: 13px;
+                                    color: rgb(113, 118, 123);
+                                }
+
+                                /*Right Sidebar Trend Section --- B - content section*/
+                                .rs-trend-b-content {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                }
+                        
+                        /*Right Sidebar Trend Section --- B - more icon*/
+                        .rs-trend-b-more {
+                            margin-right: 15px;
+                            height: 35px;
+                            width: 35px;
+                            border-radius: 17.5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                        }
+                        .rs-trend-b-more svg {
+                            height: 18px;
+                            width: 18px;
+                            fill: rgb(113, 118, 123);
+                        }
+                        .rs-trend-b-more:hover svg {
+                            fill: rgb(28, 149, 229);
+                        }
+                        .rs-trend-b-more:hover {
+                            background-color: rgba(28, 149, 229, 0.09);
+                        }
+                                .rs-icon-tt {
+                                    position: absolute;
+                                    bottom: -20px;
+                                    background-color: rgba(75, 92, 107, 0.8);
+                                    color: rgba(221, 225, 227, 255);
+                                    font-size: 11.8px;
+                                    font-weight: 500;
+                                    white-space: nowrap;
+                                    padding: 1px 4px;
+                                    opacity: 0;
+                                    pointer-events: none;
+                                    border-radius: 1px;
+                                    visibility: hidden;
+                                    transform: translateY(2px);
+                                    transition: opacity 0.3 ease, transform 0.3 ease;
+                                    transition-delay: 0s;
+                                }
+                                .rs-trend-b-more:hover .rs-icon-tt {
+                                    opacity: 1;
+                                    pointer-events: none;
+                                    transform: translateY(0);
+                                    visibility: visible;
+                                    transition-delay: 0.9s;
+                                }
+                /*Right Sidebar Trend Section --- B - show more section*/
+                .rs-trend-showmore {
+                    padding: 15px 0px 20px 15px;
+                    color: rgb(29, 155, 240);
+                    cursor: pointer;
+                    user-select: none;
+                }
+                .rs-trend-showmore:hover {
+                    background-color: rgba(255, 255, 255, 0.03);
+                }
+        /*Right Sidebar Suggestion section*/
+        .rs-suggst {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(197, 197, 197, 0.3);
+            width: 69%;
+            border-radius: 15px;
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+
+        .rs-suggst> div:not(:first-of-type):not(:last-of-type) {
+            padding-bottom: 10px;
+        }
+
+                /*Right Sidebar Suggestion Title Section*/
+                .rs-suggst-title {
+                    margin: 10px 0px 15px 15px;
+                    user-select: initial;
+                    caret-color: white;
+                }
+ 
+                /*Right Sidebar Suggestion Profile Box*/
+                .rs-suggst-profile {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 10px 0px 0px 15px;
+                    position: relative;
+                    cursor: pointer;
+                    user-select: none;
+                }
+                .rs-suggst-profile:hover {
+                    background-color: rgba(255, 255, 255, 0.03);
+                }
+
+                
+
+                        /*Right Sidebar Suggestion Title Section*/
+                        .rs-profile-picture-images {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 20px;
+                            border: none;
+                            object-fit: cover;
+                            transition: opacity 0.15s;
+                        }
+                        .rs-profile-picture-images:hover {
+                            opacity: 0.9;
+                        }
+
+                        /*Right Sidebar Suggestion Details of Profile*/
+                        .rs-suggst-profile-details {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            width: 110px;
+                            padding-left: 8px;
+                        }
+
+                                /*Right Sidebar Suggestion Profile Name Box*/
+                                .rs-suggst-profile-name-box {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    font-weight: bold;
+                                    position: relative;
+                                }
+                                                       
+                                        /*Right Sidebar Suggestion Profile Name*/
+                                        .rs-suggst-profile-name {
+                                            display: flex;
+                                            flex-direction: row;
+                                            font-size: 15px;
+                                            margin-right: 3px;
+                                            pointer-events: none;
+                                        }
+
+                                        .rs-suggst-profile-name.hoveredBelow::after {
+                                            content: "";
+                                            position: absolute;
+                                            bottom: -10px;
+                                            left: 0;
+                                            width: 91px;
+                                            height: 16px;
+                                        } 
+
+                                        /*Flag of Turkey Box*/
+                                        .flag-of-turkey-box {
+                                            width: 24px;
+                                            height: 24px;
+                                            pointer-events: none;
+                                        }
+
+                                        .rs-tooltip {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+                                            position: fixed;
+                                            width: 270px;
+                                            padding: 15px;
+                                            background-color: black;
+                                            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+                                            border-radius: 20px;
+                                            z-index: 1010;
+                                            backdrop-filter: blur(12px);
+
+
+                                            opacity: 0;
+                                            visibility: hidden;
+                                            transition-property: opacity, transform, visibility;
+                                            transition-duration: 0.2s, 0.2s, 0.35s, 0.35s, 0s;
+                                            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                                            transition-delay: 0s, 0s, 0s, 0s, 0.35s;
+                                            transform: translateY(0);
+                                        }
+
+                                        .rs-tooltip.show {
+                                            opacity: 1;
+                                            visibility: visible;
+                                            transition-delay: 0s;
+                                        }
+                                        .rs-tooltip
+                                        
+                                        
+                                        
+                                .rs-suggst-profile-atname-box {
+                                    display: flex;
+                                    position: relative;
+                                }
+
+                                        /*Right Sidebar Suggestion Profile Section
+                                        @Name section*/
+                                        .rs-suggst-profile-atname {
+                                            color: rgb(113, 118, 123);
+                                        }
+                                        .rs-suggst-profile-atname.hoveredAbove::before {
+                                            content: "";
+                                            position: absolute;
+                                            top: -10px;
+                                            left: 0;
+                                            width: 91px;
+                                            height: 16px;
+                                        } 
+                                        .rs-suggst-channelatname-tooltip {
+                                            bottom: calc(100% + 15px);
+                                            left: -85px;                                
+                                        }
+
+
+                        
+                        
+                        
+
+                        /*Right Sidebar Suggestion Follow Button*/
+                        .rs-suggst-follow-button {
+                            background-color: rgb(231, 233, 234);
+                            color: rgb(15, 20, 25);
+                            display: flex;
+                            align-items: center;
+                            height: 27.2px;
+                            padding: 3px 17px;
+                            border-radius: 24px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            margin-left: 80px;
+                            transition: background-color 0.3s ease;
+                        }
+                        .rs-suggst-follow-button:hover {
+                            opacity: 0.9;
+                        }
+                .rs-suggst-showmore {
+                    color: rgb(29, 155, 240);
+                    padding: 15px 0px 20px 15px;
+                    user-select: none;
+                    cursor: pointer;
+                }
+                .rs-suggst-showmore:hover {
+                    background-color: rgba(255, 255, 255, 0.03);
+                }
+
+        /*Footer of Right Sidebar*/
+        footer {
+            display: flex;
+            color: rgb(113, 118, 123);
+            flex-direction: column;
+            font-size: 12px;
+            margin-left: 40px;
+            margin-top: 15px;
+            row-gap: 8px;
+        }
+                /*Right Sidebar Footer First Line*/
+                .rs-footer-1l {
+                    display: flex;
+                    flex-direction: row;
+                    caret-color: transparent;
+                }
+                .rs-footer-1l div:nth-child(odd):hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+                .rs-footer-1l> div:nth-child(even) {
+                    margin: 0px 10px;
+                }
+
+                /*Right Sidebar Footer Second Line*/
+                .rs-footer-2l {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                        /*Right Sidebar Footer Second Line First Element*/
+                        .rs-footer-2l-1e {
+                            display: flex;
+                            flex-direction: row;
+                            caret-color: transparent;
+                            cursor: pointer;
+                        }
+                        .rs-footer-2l-1e div:first-child:hover {
+                            text-decoration: underline;
+                        }
+                                /*Right Sidebar Footer Second Line First Element 
+                                More icon*/
+                                .rs-footer-2l1e-more-icon {
+                                    height: 12px;
+                                    width: 12px;
+                                    padding-top: 3px;
+                                    padding-left: 2px;
+                                    padding-right: 25px;
+                                }
+
+
+.bg {
+    background-color: black;
+    position: fixed;
+    z-index: 1005;
+    top: -7px;
+    left: 1030px;
+    width: 515px;
+    height: 61px;
+}
+
+/*Right Sidebar search box*/
+.rs-search-box {
+    display: flex;
+    border: 1px solid rgba(197, 197, 197, 0.3);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    width: 349px;
+    padding: 12px 0px 10px 10px;
+    flex-direction: row;
+    column-gap: 5px;
+    position: fixed;
+    top: 5px;
+    left: 1039px;
+    z-index: 1010;
+    align-items: center;
+    background-color: black;
+    overscroll-behavior: contain;
+}
+
+
+        /*Right Sidebar search input*/
+        .rs-search-input {
+            background-color: black;
+            color: white;
+            border: none;
+            z-index: 1010;
+            width: 78%;
+            caret-color: rgb(29, 155, 240);
+        }
+
+            .rs-search-input::placeholder {
+                color: rgb(113, 118, 123);
+                font-size: 14px;
+                font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            }
+
+            .rs-search-input:focus {
+                outline: none;
+                
+            }
+        
+        /*Right Sidebar magnifying glass*/
+        .rs-mgls-box {
+            display: flex;
+            height: 17px;
+            width: 17px;
+            z-index: 1010;
+        }
+
+
+
+.rs-suggst-follow-button.clicked {
+    margin-left: 60.5px !important;
+}
+.rs-suggst-follow-button.unfollowhover {
+    color: rgb(234, 33, 46) !important;
+    border: 1px rgb(234, 33, 46) solid !important;
+    background-color: rgba(234, 33, 46, 0.12) !important;
+    padding: 3px 19.1375px !important;
+}
+.rs-suggst-follow-button.mouseout {
+    background-color: transparent !important;
+    color: rgb(231, 233, 234) !important;
+    border: 0.5px rgba(255, 255, 255, 0.3) solid !important;
+    padding: 3px 17px !important;
+}
