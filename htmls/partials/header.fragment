@@ -1,0 +1,8 @@
+<div class="hd-for-you selected">
+  <div class="hd-f-text">For you</div>
+  <div class="hd-for-you-underline"></div>
+</div>
+<div class="hd-following">
+  <div class="hd-f-text">Following</div>
+  <div class="hd-following-underline"></div>
+</div>

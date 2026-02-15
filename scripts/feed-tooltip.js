@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("contentLoaded", () => {
     const triggerConfigs = [
       { trigger: ".feed-tweet-pp-image", tooltip: ".feed-profile-tooltip" },
       { trigger: ".feed-condet-channel-name", tooltip: ".channel-name-tooltip" },
@@ -126,60 +126,57 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }, 50);
     });
-});
-
-
-
-
-
-
-
-
-
-// Feed and Rs tooltip follow button js
-
-const fd_buttons = document.querySelectorAll(".feed-profile-tooltip .feed-tt-pp-follow-box .feed-tt-follow-button");
-fd_buttons.forEach(btn => {
-  let isClick = false;
-  btn.addEventListener('mouseover', () => {
-    if(isClick) {
-      btn.textContent = "Unfollow";
-      btn.style.color = "rgb(234, 33, 46)";
-      btn.style.borderColor = "rgb(234, 33, 46)";
-      btn.style.backgroundColor = "rgba(234, 33, 46, 0.12)";
-      btn.style.padding = "8px 19px";
-    }
-  });
   
-  btn.addEventListener('mouseout', () => {
-    if(isClick){
-      btn.style.backgroundColor = "transparent";
-      btn.textContent = "Following";
-      btn.style.color = "rgb(231, 233, 234)";
-      btn.style.border = "0.5px rgba(255, 255, 255, 0.3) solid";
-      btn.style.padding = "8px 17px";
-    }
+
+  // Feed and Rs tooltip follow button js
+
+  const fd_buttons = document.querySelectorAll(".feed-profile-tooltip .feed-tt-pp-follow-box .feed-tt-follow-button");
+  fd_buttons.forEach(btn => {
+    let isClick = false;
+    btn.addEventListener('mouseover', () => {
+      if(isClick) {
+        btn.textContent = "Unfollow";
+        btn.style.color = "rgb(234, 33, 46)";
+        btn.style.borderColor = "rgb(234, 33, 46)";
+        btn.style.backgroundColor = "rgba(234, 33, 46, 0.12)";
+        btn.style.padding = "8px 19px";
+      }
+    });
+    
+    btn.addEventListener('mouseout', () => {
+      if(isClick){
+        btn.style.backgroundColor = "transparent";
+        btn.textContent = "Following";
+        btn.style.color = "rgb(231, 233, 234)";
+        btn.style.border = "0.5px rgba(255, 255, 255, 0.3) solid";
+        btn.style.padding = "8px 17px";
+      }
+    });
+
+
+
+    btn.addEventListener('click', () => {
+      btn.classList.toggle("clicked");
+      if (btn.classList.contains("clicked")) {
+        btn.textContent = "Following";
+        isClick = true;
+        btn.style.padding = "8px 19px";
+      } else {
+        btn.textContent = "Follow";
+        isClick = false;
+        btn.style.backgroundColor = "rgb(231, 233, 234)";
+        btn.style.removeProperty("border");
+        btn.style.color = "black";
+        btn.style.removeProperty("width");
+      }
+    });
+
   });
 
 
 
-  btn.addEventListener('click', () => {
-    btn.classList.toggle("clicked");
-    if (btn.classList.contains("clicked")) {
-      btn.textContent = "Following";
-      isClick = true;
-      btn.style.padding = "8px 19px";
-    } else {
-      btn.textContent = "Follow";
-      isClick = false;
-      btn.style.backgroundColor = "rgb(231, 233, 234)";
-      btn.style.removeProperty("border");
-      btn.style.color = "black";
-      btn.style.removeProperty("width");
-    }
-  });
+
+
+
 
 });
-
-
-

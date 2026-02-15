@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("contentLoaded", () => {
   const textAreaBox = document.querySelector(".feed-textarea-box");
   const feedPet = document.querySelector(".feed-pet");
   const textArea = textAreaBox.querySelector(".feed-textarea");

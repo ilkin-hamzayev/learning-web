@@ -1,0 +1,180 @@
+<div id="tooltip-1" class="rs-tooltip">
+  <div class="feed-tt-pp-follow-box">
+    <img class="feed-tt-pp-image" src="../../profile-pictures/r-sidebar-profile-picture-1.jpg">
+    <div class="feed-tt-follow-button">
+      Follow
+    </div>
+  </div>
+  <div class="feed-tt-details-box">
+    <div class="feed-tt-names-box">
+      <div class="feed-tt-name-box">
+        <div class="feed-tt-name">İlham Əliyev</div>
+        <div class="blue-or-gold-or-silver-tick-box">
+          <svg viewBox="0 0 22 22">
+            <g>
+              <path clip-rule="evenodd" fill-rule="evenodd" d="M12.05 2.056c-.568-.608-1.532-.608-2.1
+              0l-1.393 1.49c-.284.303-.685.47-1.1.455L5.42 3.932c-.832-.028-1.514.654-1.486
+              1.486l.069 2.039c.014.415-.152.816-.456 1.1l-1.49 1.392c-.608.568-.608
+              1.533 0 2.101l1.49 1.393c.304.284.47.684.456 1.1l-.07 2.038c-.027.832.655
+              1.514 1.487 1.486l2.038-.069c.415-.014.816.152 1.1.455l1.392 1.49c.569.609
+              1.533.609 2.102 0l1.393-1.49c.283-.303.684-.47 1.099-.455l2.038.069c.832.028
+              1.515-.654 1.486-1.486L18 14.542c-.015-.415.152-.815.455-1.099l1.49-1.393c.608-.568.608-1.533
+              0-2.101l-1.49-1.393c-.303-.283-.47-.684-.455-1.1l.068-2.038c.029-.832-.654-1.514-1.486-1.486l-2.038.07c-.415.013-.816-.153-1.1-.456zm-5.817
+              9.367l3.429 3.428 5.683-6.206-1.347-1.247-4.4 4.795-2.072-2.072z" fill="#829aab">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="feed-tt-atname">
+        @azpresident
+      </div>
+    </div>
+    <div class="feed-tt-description">
+      Official X account of President Ilham Aliyev
+    </div>
+  </div>
+  <div class="feed-tt-f-box">
+    <div class="feed-tt-f">
+      <span class="feed-tt-f-num">3</span>
+      <span class="feed-tt-f-text">Following</span>
+    </div>
+    <div class="feed-tt-f">
+      <span class="feed-tt-f-num">829.9K</span>
+      <span class="feed-tt-f-text">Followers</span>
+    </div>
+  </div>
+  <div class="feed-tt-profile-summary">
+    <div class="feed-tt-ps-grok">
+      <svg viewBox="0 0 33 32">
+        <g>
+          <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38
+          1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83
+          1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324
+          3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227
+          3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263
+          1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448
+          9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41
+          2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22
+          8.364C1.49 30.2.666 31.074 0 32l10.478-9.466" fill="rgb(239, 243, 244)">
+          </path>
+        </g>
+      </svg>
+    </div>
+    <div class="feed-tt-ps-text">
+      Profile Summary
+    </div>
+  </div>
+</div>
+
+
+<div id="tooltip-2" class="rs-tooltip">
+  <div class="feed-tt-pp-follow-box">
+    <img class="feed-tt-pp-image" src="../../profile-pictures/r-sidebar-profile-picture-2.jpg">
+    <div class="feed-tt-follow-button">
+      Follow
+    </div>
+  </div>
+  <div class="feed-tt-details-box">
+    <div class="feed-tt-names-box">
+      <div class="feed-tt-name-box">
+        <div class="rs-suggst-profile-name">
+          p <div class="flag-of-turkey-box">
+            <img src="../../profile-pictures/svgs inside names/flag-of-turkey.svg"
+            class="flag-of-turkey-image">
+          </div>
+        </div>
+      </div>
+      <div class="feed-tt-atname">
+        @weprpleyou
+      </div>
+    </div>
+    <div class="feed-tt-description">
+    </div>
+  </div>
+  <div class="feed-tt-f-box">
+    <div class="feed-tt-f">
+      <span class="feed-tt-f-num">434</span>
+      <span class="feed-tt-f-text">Following</span>
+    </div>
+    <div class="feed-tt-f">
+      <span class="feed-tt-f-num">418</span>
+      <span class="feed-tt-f-text">Followers</span>
+    </div>
+  </div>
+  <div class="feed-tt-profile-summary">
+    <div class="feed-tt-ps-grok">
+      <svg viewBox="0 0 33 32">
+        <g>
+          <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38
+          1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83
+          1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324
+          3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227
+          3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263
+          1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448
+          9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41
+          2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22
+          8.364C1.49 30.2.666 31.074 0 32l10.478-9.466" fill="rgb(239, 243, 244)">
+          </path>
+        </g>
+      </svg>
+    </div>
+    <div class="feed-tt-ps-text">
+      Profile Summary
+    </div>
+  </div>
+</div>
+
+
+<div id="tooltip-3" class="rs-tooltip" >
+  <div class="feed-tt-pp-follow-box">
+    <img class="feed-tt-pp-image" src="../../profile-pictures/r-sidebar-profile-picture-3.jpg">
+    <div class="feed-tt-follow-button">
+      Follow
+    </div>
+  </div>
+  <div class="feed-tt-details-box">
+    <div class="feed-tt-names-box">
+      <div class="feed-tt-name-box">
+        <div class="feed-tt-name">Lamiya Rovşan</div>
+      </div>
+      <div class="feed-tt-atname">
+        @LamiyaRovsan
+      </div>
+    </div>
+    <div class="feed-tt-description">
+      wherever | reklam ve iş birliği için Dm ✉️
+    </div>
+  </div>
+  <div class="feed-tt-f-box">
+    <div class="feed-tt-f">
+      <span class="feed-tt-f-num">54</span>
+      <span class="feed-tt-f-text">Following</span>
+    </div>
+    <div class="feed-tt-f">
+      <span class="feed-tt-f-num">13</span>
+      <span class="feed-tt-f-text">Followers</span>
+    </div>
+  </div>
+  <div class="feed-tt-profile-summary">
+    <div class="feed-tt-ps-grok">
+      <svg viewBox="0 0 33 32">
+        <g>
+          <path d="M12.745 20.54l10.97-8.19c.539-.4 1.307-.244 1.564.38
+          1.349 3.288.746 7.241-1.938 9.955-2.683 2.714-6.417 3.31-9.83
+          1.954l-3.728 1.745c5.347 3.697 11.84 2.782 15.898-1.324
+          3.219-3.255 4.216-7.692 3.284-11.693l.008.009c-1.351-5.878.332-8.227
+          3.782-13.031L33 0l-4.54 4.59v-.014L12.743 20.544m-2.263
+          1.987c-3.837-3.707-3.175-9.446.1-12.755 2.42-2.449 6.388-3.448
+          9.852-1.979l3.72-1.737c-.67-.49-1.53-1.017-2.515-1.387-4.455-1.854-9.789-.931-13.41
+          2.728-3.483 3.523-4.579 8.94-2.697 13.561 1.405 3.454-.899 5.898-3.22
+          8.364C1.49 30.2.666 31.074 0 32l10.478-9.466" fill="rgb(239, 243, 244)">
+          </path>
+        </g>
+      </svg>
+    </div>
+    <div class="feed-tt-ps-text">
+      Profile Summary
+    </div>
+  </div>
+</div>
